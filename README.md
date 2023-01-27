@@ -1,1 +1,1 @@
-I am an alx software engineering student \n
+My bash journey as a student of ALX software engineering school program.\n
