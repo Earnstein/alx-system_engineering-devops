@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""script using this REST API, for a given employee ID,
-returns information about his/her TODO list progress."""
-import requests as r
+"""Returns todo list information for a given employee ID."""
+import requests
 import sys
-
 if __name__ == '__main__':
     url = 'https://jsonplaceholder.typicode.com/'
     usr_id = r.get(url + 'users/{}'.format(sys.argv[1])).json()
@@ -16,3 +14,4 @@ if __name__ == '__main__':
                                                           len(completed),
                                                           len(to_do)))
     [print("\t {}".format(title)) for title in completed]
+
